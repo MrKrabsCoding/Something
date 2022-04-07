@@ -1,13 +1,20 @@
 #include <iostream>
+#include "math.h"
 
-int multiply(int x, int y) { return x * y; }
-
-int add(int x, int y) { return x + y; }
-
-int subtract(int x, int y) { return x - y; }
-
+int getUserInput();
 
 int main(){
+	int first{getUserInput()};
+	int second{getUserInput()};
 
+	std::cout << multiply(first, second) << "\n";
 	return 0;
+}
+
+int getUserInput(){
+	std::cout << "Enter a number \n";
+	int input{};
+	std::cin >> input;
+
+	return input;
 }
